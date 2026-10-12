@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="Adarsh Verma — Data Science postgraduate, Machine Learning and Generative AI developer." />
+  <title>Adarsh Verma | Data Science & AI</title>
+  <style>
+    :root{--bg:#0b1020;--panel:#111a2e;--panel2:#141f36;--text:#edf2ff;--muted:#a5b1cb;--line:rgba(255,255,255,.1);--accent:#83f0d0;--accent2:#a5a4ff;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(96,95,190,.18),transparent 34%),radial-gradient(ellipse at 0% 20%,rgba(53,189,157,.1),transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav-wrap{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;letter-spacing:-.04em;font-size:1.12rem}.brand span{color:var(--accent)}
+    .nav-links{display:flex;gap:22px;align-items:center;color:var(--muted);font-size:.9rem}.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+    .menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 11px;font-size:1rem}
+    .hero{padding:92px 0 82px;display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:52px;min-height:580px}
+    .eyebrow{color:var(--accent);font-weight:700;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:25px;height:1px;background:var(--accent)}
+    h1{font-size:clamp(2.8rem,6vw,5.3rem);line-height:1.03;letter-spacing:-.065em;margin:20px 0 18px}h1 .gradient{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{font-size:1.12rem;color:var(--muted);max-width:650px}.hero-copy strong{color:var(--text);font-weight:650}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:12px;padding:12px 17px;font-weight:700;font-size:.92rem;transition:transform .2s,border-color .2s,background .2s}.btn:hover{transform:translateY(-2px);border-color:var(--accent)}.btn.primary{background:var(--accent);color:#071a19;border-color:var(--accent)}.btn.primary:hover{background:#a3f8e1}
+    .hero-card{position:relative;background:linear-gradient(145deg,rgba(20,31,54,.95),rgba(13,20,38,.88));border:1px solid var(--line);border-radius:26px;padding:27px;box-shadow:0 24px 80px rgba(0,0,0,.22);overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-80px;top:-90px;background:rgba(131,240,208,.1);filter:blur(3px)}
+    .monogram{width:74px;height:74px;border-radius:22px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b1020;display:grid;place-items:center;font-size:1.65rem;font-weight:900;letter-spacing:-.06em;margin-bottom:24px}
+    .status{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;padding:6px 10px;color:var(--muted);font-size:.78rem}.dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 4px rgba(131,240,208,.1)}
+    .hero-card h3{margin:18px 0 5px;font-size:1.35rem}.hero-card p{color:var(--muted);margin:0}.mini-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.stat{border-top:1px solid var(--line);padding-top:13px}.stat b{display:block;font-size:1.5rem;letter-spacing:-.04em}.stat span{font-size:.78rem;color:var(--muted)}
+    section{padding:76px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:800}h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.05em;margin:9px 0 0}.section-intro{color:var(--muted);max-width:490px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:rgba(17,26,46,.76);border:1px solid var(--line);border-radius:20px;padding:25px}.panel p{color:var(--muted);margin:8px 0 0}.panel h3{margin:0;font-size:1.05rem}.timeline{display:grid;gap:18px;margin-top:18px}.timeline-item{display:grid;grid-template-columns:18px 1fr;gap:12px}.timeline-mark{width:10px;height:10px;margin-top:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 5px rgba(131,240,208,.09)}.timeline-item b{display:block}.timeline-item small{color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.chip{border:1px solid var(--line);background:rgba(255,255,255,.025);color:#dce5fa;border-radius:9px;padding:7px 11px;font-size:.85rem}.skill-group{margin-top:22px}.skill-group:first-of-type{margin-top:14px}.skill-group h4{margin:0;color:var(--muted);font-size:.83rem;font-weight:650}
+    .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.project{position:relative;display:flex;flex-direction:column;min-height:310px;background:linear-gradient(145deg,rgba(20,31,54,.88),rgba(13,20,38,.85));border:1px solid var(--line);border-radius:20px;padding:25px;transition:transform .22s,border-color .22s}.project:hover{transform:translateY(-4px);border-color:rgba(131,240,208,.55)}.project-top{display:flex;justify-content:space-between;gap:15px;align-items:center}.project-icon{width:43px;height:43px;border-radius:13px;background:rgba(131,240,208,.1);display:grid;place-items:center;color:var(--accent);font-size:1.2rem}.project-num{font-size:.8rem;color:#74819e}.project h3{font-size:1.22rem;line-height:1.3;letter-spacing:-.025em;margin:20px 0 8px}.project p{margin:0;color:var(--muted);font-size:.93rem}.project ul{padding-left:18px;color:var(--muted);font-size:.87rem;margin:12px 0 20px}.project li{margin:5px 0}.project .skills{margin-top:auto}.project .chip{font-size:.75rem;padding:5px 8px}
+    .metrics{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.metric{border:1px solid rgba(131,240,208,.2);background:rgba(131,240,208,.055);border-radius:10px;padding:8px 10px}.metric b{color:var(--accent);font-size:1rem;display:block}.metric span{font-size:.72rem;color:var(--muted)}
+    .achievement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.achievement{border:1px solid var(--line);border-radius:17px;background:rgba(17,26,46,.6);padding:20px}.achievement .symbol{font-size:1.25rem;color:var(--accent)}.achievement h3{font-size:1rem;margin:10px 0 5px}.achievement p{font-size:.86rem;color:var(--muted);margin:0}
+    .contact-box{display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center;border:1px solid var(--line);border-radius:24px;padding:clamp(24px,5vw,46px);background:radial-gradient(ellipse at 100% 0%,rgba(165,164,255,.12),transparent 45%),rgba(17,26,46,.72)}.contact-box p{color:var(--muted);max-width:570px}.contact-links{display:grid;gap:10px}.contact-link{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;color:var(--muted);overflow-wrap:anywhere}.contact-link:hover{color:var(--accent);border-color:var(--accent)}.contact-link b{color:var(--text);font-size:.9rem}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.back-top{color:var(--accent)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:30px;padding-top:66px;min-height:auto}.hero-card{max-width:520px}.about-grid,.contact-box{grid-template-columns:1fr}.achievement-grid{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.nav-links{gap:14px}}
+    @media(max-width:600px){.container{width:min(var(--max),calc(100% - 30px))}nav{height:64px}.menu-btn{display:block}.nav-links{display:none;position:absolute;left:15px;right:15px;top:64px;padding:16px;background:#111a2e;border:1px solid var(--line);border-radius:14px;flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:10px}.hero{padding:56px 0 42px}section{padding:56px 0}.project-grid{grid-template-columns:1fr}.achievement-grid{grid-template-columns:1fr}.project{min-height:0}.hero-copy{font-size:1rem}.mini-stats{gap:18px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="container" aria-label="Main navigation">
+      <a class="brand" href="#home">AV<span>.</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <header class="container hero" id="home">
+      <div class="reveal">
+        <div class="eyebrow">Data Science · Machine Learning · GenAI</div>
+        <h1>Hi, I'm Adarsh.<br><span class="gradient">I build intelligent</span><br>systems.</h1>
+        <p class="hero-copy">I'm an <strong>M.Tech Data Science student at Delhi Technological University</strong>, interested in building practical machine learning, retrieval-augmented generation, and agentic AI applications.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="btn" href="mailto:adarshdivy@gmail.com">Let's connect <span aria-hidden="true">↗</span></a>
+          <!-- Replace the # below with your public resume URL if you want a resume button. -->
+          <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+        </div>
+      </div>
+      <aside class="hero-card reveal" aria-label="Profile summary">
+        <div class="monogram">AV</div>
+        <span class="status"><span class="dot"></span> Learning, building, iterating</span>
+        <h3>Turning data into useful outcomes.</h3>
+        <p>From predictive ML pipelines to context-aware AI assistants, I enjoy working across data, models, retrieval, and application layers.</p>
+        <div class="mini-stats">
+          <div class="stat"><b>3</b><span>Featured projects</span></div>
+          <div class="stat"><b>400+</b><span>LeetCode problems solved</span></div>
+          <div class="stat"><b>8.93</b><span>M.Tech CGPA</span></div>
+          <div class="stat"><b>5★</b><span>HackerRank Python & SQL</span></div>
+        </div>
+      </aside>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">A little about me</div><h2>Curiosity, meet execution.</h2></div><p class="section-intro">I like understanding why a system works—not just making it run—and turning that understanding into reliable, measurable applications.</p></div>
+        <div class="about-grid">
+          <article class="panel reveal">
+            <h3>What I work on</h3>
+            <p>My interests span machine learning, data science, deep learning, NLP, generative AI, RAG systems, and agentic workflows. I focus on clean preprocessing, meaningful evaluation, and building end-to-end solutions.</p>
+            <div class="skills"><span class="chip">Model evaluation</span><span class="chip">Feature engineering</span><span class="chip">RAG</span><span class="chip">LLM evaluation</span><span class="chip">API development</span></div>
+          </article>
+          <article class="panel reveal">
+            <h3>Education</h3>
+            <div class="timeline">
+              <div class="timeline-item"><span class="timeline-mark"></span><div><b>M.Tech, Data Science</b><small>Delhi Technological University · New Delhi</small><br><small>Aug 2025 – Present · CGPA: 8.93</small></div></div>
+              <div class="timeline-item"><span class="timeline-mark"></span><div><b>B.Tech, Computer Science and Engineering</b><small>Quantum University · Roorkee</small><br><small>2020 – 2024 · CGPA: 8.36</small></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">Technical toolkit</div><h2>Tools I use to build.</h2></div><p class="section-intro">A practical mix of programming, ML foundations, LLM application frameworks, and data tooling.</p></div>
+        <div class="panel reveal">
+          <div class="skill-group"><h4>Programming</h4><div class="skills"><span class="chip">Python</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">SQL</span></div></div>
+          <div class="skill-group"><h4>Machine Learning & Data</h4><div class="skills"><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Scikit-learn</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Statistics</span><span class="chip">Feature Engineering</span></div></div>
+          <div class="skill-group"><h4>GenAI & Application Development</h4><div class="skills"><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">RAG</span><span class="chip">LLM Evals</span><span class="chip">Agentic AI</span><span class="chip">FastAPI</span><span class="chip">Vector Databases</span><span class="chip">ChromaDB</span><span class="chip">Mem0</span><span class="chip">Guardrails AI</span></div></div>
+          <div class="skill-group"><h4>Tools & Databases</h4><div class="skills"><span class="chip">MySQL</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Docker</span><span class="chip">DVC</span><span class="chip">Power BI</span><span class="chip">Google Colab</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">Selected work</div><h2>Projects with purpose.</h2></div><p class="section-intro">A selection of applied ML and AI systems from my resume. Metrics shown are reported project results.</p></div>
+        <div class="project-grid">
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon" aria-hidden="true">⌁</div><span class="project-num">01 / ML</span></div>
+            <h3>Machine Learning-Based Two-Stage Loan Approval System</h3>
+            <p>A two-stage pipeline that predicts loan approval and estimates the loan amount, with preprocessing and model steps persisted together to help keep training and inference consistent.</p>
+            <div class="metrics"><div class="metric"><b>85.6%</b><span>Classifier accuracy</span></div><div class="metric"><b>88%</b><span>Precision</span></div><div class="metric"><b>R² 0.85</b><span>Amount regressor</span></div></div>
+            <ul><li>Trained and evaluated on 4,269 loan applications.</li><li>Used Random Forest, StandardScaler, OneHotEncoder, ColumnTransformer, and 5-fold GridSearchCV.</li><li>Identified CIBIL score and income as key decision factors; project reports inference time reduced to 100 ms.</li></ul>
+            <div class="skills"><span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">Pipelines</span><span class="chip">GridSearchCV</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon" aria-hidden="true">⌘</div><span class="project-num">02 / RAG</span></div>
+            <h3>AI-Powered Source Code Analyzer</h3>
+            <p>A retrieval-augmented assistant that lets developers ask natural-language questions about Python codebases and receive answers grounded in semantically retrieved code.</p>
+            <div class="metrics"><div class="metric"><b>95%</b><span>Reported retrieval accuracy</span></div><div class="metric"><b>2–5 s</b><span>Response latency</span></div><div class="metric"><b>~$0.05</b><span>Estimated cost/query</span></div></div>
+            <ul><li>Built with LangChain, ChromaDB, OpenAI embeddings, and GPT-3.5 Turbo.</li><li>Used 2,000-character chunks with 200-character overlap and MMR retrieval (k=8).</li><li>Added conversational summary memory to support multi-turn context and manage token use.</li></ul>
+            <div class="skills"><span class="chip">RAG</span><span class="chip">LangChain</span><span class="chip">ChromaDB</span><span class="chip">Embeddings</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon" aria-hidden="true">✳</div><span class="project-num">03 / Agentic AI</span></div>
+            <h3>AI-Powered Customer Support Agent</h3>
+            <p>A support copilot that drafts context-aware replies, retains long-term customer memory, and uses tools to retrieve relevant CRM and billing data.</p>
+            <div class="metrics"><div class="metric"><b>0.6354</b><span>Faithfulness</span></div><div class="metric"><b>0.7425</b><span>Answer relevancy</span></div><div class="metric"><b>1.00</b><span>Context precision</span></div></div>
+            <ul><li>Built with Python, FastAPI, LangChain, LangGraph, Groq LLM, Mem0, and ChromaDB.</li><li>Integrated Guardrails AI for output validation and a Ragas evaluation pipeline.</li><li>Benchmarked against a 60-question golden dataset.</li></ul>
+            <div class="skills"><span class="chip">FastAPI</span><span class="chip">LangGraph</span><span class="chip">Mem0</span><span class="chip">Ragas</span><span class="chip">Guardrails AI</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-top"><div class="project-icon" aria-hidden="true">↗</div><span class="project-num">04 / Focus</span></div>
+            <h3>What I care about in a good ML system</h3>
+            <p>Beyond a model score, I care about the full path from reliable data preparation to evaluation and usable application behavior.</p>
+            <ul><li>Reproducible preprocessing and train–inference consistency.</li><li>Retrieval quality, grounded responses, and systematic LLM evaluation.</li><li>Practical latency, cost, maintainability, and clear communication of limitations.</li></ul>
+            <div class="skills"><span class="chip">Reliability</span><span class="chip">Evaluation</span><span class="chip">Reproducibility</span><span class="chip">Product thinking</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">Milestones</div><h2>Achievements & practice.</h2></div></div>
+        <div class="achievement-grid">
+          <article class="achievement reveal"><div class="symbol">✦</div><h3>GATE 2025 — CSE</h3><p>Qualified with a score of 479, as listed in my resume.</p></article>
+          <article class="achievement reveal"><div class="symbol">♜</div><h3>Hack 12</h3><p>Runner-up among 50+ teams in a college-level hackathon (2022).</p></article>
+          <article class="achievement reveal"><div class="symbol">⌁</div><h3>Srijan Hackathon</h3><p>State-level winner for innovative technical solution design (2022).</p></article>
+          <article class="achievement reveal"><div class="symbol">★</div><h3>HackerRank</h3><p>5-star Python, 5-star MySQL, and 4-star Problem Solving.</p></article>
+          <article class="achievement reveal"><div class="symbol">⌘</div><h3>LeetCode</h3><p>400+ problems solved across algorithms and data structures.</p></article>
+          <article class="achievement reveal"><div class="symbol">◎</div><h3>Continuous learning</h3><p>Building depth in ML, NLP, GenAI, and practical AI evaluation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <div><div class="kicker">Get in touch</div><h2>Have an interesting problem?</h2><p>I'm happy to connect about machine learning, data science, generative AI, projects, and opportunities to build useful things together.</p><a class="btn primary" href="mailto:adarshdivy@gmail.com">Email me ↗</a></div>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:adarshdivy@gmail.com"><span>✉</span><div><b>Email</b><br>adarshdivy@gmail.com</div></a>
+            <a class="contact-link" href="tel:+918009997671"><span>☎</span><div><b>Phone</b><br>+91 8009997671</div></a>
+            <a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span>↗</span><div><b>LinkedIn</b><br>Replace with your profile URL</div></a>
+            <a class="contact-link" href="https://github.com/" target="_blank" rel="noreferrer"><span>⌘</span><div><b>GitHub</b><br>Replace with your profile URL</div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Adarsh Verma · Built with HTML, CSS & JavaScript.</span><a class="back-top" href="#home">Back to top ↑</a></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.nav-links a').forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
+  </script>
+</body>
+</html>
